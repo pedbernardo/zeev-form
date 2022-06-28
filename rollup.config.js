@@ -9,7 +9,7 @@ export default {
       format: 'esm'
     },
     {
-      name: 'Form',
+      name: 'ZeevForm',
       file: pkg.browser,
       format: 'umd'
     }
