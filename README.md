@@ -89,7 +89,7 @@ useFields([
     field: 'idDoCampoB',
     callback: value => console.log(`executo no trigger, valores do campo: ${value}`)
   }
-  ])
+])
 ```
 
 ### Utilizando via script tag e CDN
