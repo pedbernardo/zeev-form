@@ -1,7 +1,7 @@
 {
   "name": "zeev-form",
   "description": "Non official Zeev Javascript form library powered by simple schemas",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/zeev-form.esm.js",
   "module": "dist/zeev-form.esm.js",
   "browser": "dist/zeev-form.js",
