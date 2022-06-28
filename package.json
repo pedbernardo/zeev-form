@@ -1,0 +1,56 @@
+{
+  "name": "zeev-form",
+  "description": "Non official Zeev Javascript form library powered by simple schemas",
+  "version": "0.2.0",
+  "main": "dist/zeev-form.esm.js",
+  "module": "dist/zeev-form.esm.js",
+  "browser": "dist/zeev-form.js",
+  "scripts": {
+    "dev": "npm run test:watch && npm run dev:watch",
+    "dev:watch": "rollup -c -w",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --coverage",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "lint": "eslint src/**/*.js --max-warnings=0 --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.js": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedbernardo/zeev-form.git"
+  },
+  "keywords": [
+    "zeev",
+    "form",
+    "orquestra"
+  ],
+  "author": "Pedro Bernardo <pedrovbernardo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedbernardo/zeev-form/issues"
+  },
+  "homepage": "https://github.com/pedbernardo/zeev-form#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "c8": "^7.11.3",
+    "eslint": "^8.18.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.7",
+    "vitest": "^0.16.0"
+  },
+  "dependencies": {
+    "zeev-utils": "^0.8.3"
+  }
+}
