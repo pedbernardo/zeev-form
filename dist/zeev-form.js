@@ -449,13 +449,11 @@
       }
 
       if (type === 'radio') {
-        return [
-          instance.field
-            .find(field => field.checked)?.value
-        ]
+        return instance.field
+          .find(field => field.checked)?.value
       }
 
-      return [instance.field[0].value]
+      return instance.field[0].value
     }
 
     /**
@@ -464,6 +462,9 @@
      */
     function handleEffect (event) {
       const values = getFieldValue(instance.field);
+      const valuesInArray = Array.isArray(values)
+        ? values
+        : [values];
 
       state.values = values;
 
@@ -472,7 +473,7 @@
 
       const { match, notMatch } = Object.entries(params.when)
         .reduce((fields, [condition, options]) => {
-          values.includes(condition)
+          valuesInArray.includes(condition)
             ? fields.match.push(params.when[condition])
             : fields.notMatch.push(params.when[condition]);
 
