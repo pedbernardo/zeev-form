@@ -443,11 +443,13 @@ function useField (config) {
     }
 
     if (type === 'radio') {
-      return instance.field
-        .find(field => field.checked)?.value
+      return [
+        instance.field
+          .find(field => field.checked)?.value
+      ]
     }
 
-    return instance.field[0].value
+    return [instance.field[0].value]
   }
 
   /**
